@@ -18,7 +18,7 @@ public class CriarTarefaUseCase {
         this.repository = repository;
     }
 
-    TarefaOutput execute(CriarTarefaInput input){
+    public TarefaOutput execute(CriarTarefaInput input){
         var tarefa = new Tarefa(input.titulo(), input.descricao());
         var tarefaSalva = repository.salvar(tarefa);
 

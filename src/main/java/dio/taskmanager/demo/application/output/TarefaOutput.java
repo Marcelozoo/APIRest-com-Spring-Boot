@@ -8,7 +8,7 @@ public record TarefaOutput(String id, String titulo, Optional<String> descricao,
 
     public static TarefaOutput from(Tarefa tarefa){
 
-        return new TarefaOutput(tarefa.getId().toString(),
+        return new TarefaOutput(tarefa.getId().id().toString(),
                 tarefa.getTitulo(),
                 tarefa.getDescricao(),
                 tarefa.getStatus().name());

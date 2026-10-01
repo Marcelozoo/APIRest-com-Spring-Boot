@@ -3,9 +3,12 @@ package dio.taskmanager.demo.infrastructure;
 import dio.taskmanager.demo.domain.Tarefa;
 import dio.taskmanager.demo.domain.TarefaId;
 import dio.taskmanager.demo.domain.TarefaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+
+@Repository
 public class MemoriaRepository implements TarefaRepository {
     private final Map<TarefaId, Tarefa> armazenamento = new HashMap<>();
 

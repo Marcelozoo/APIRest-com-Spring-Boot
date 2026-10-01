@@ -26,5 +26,11 @@ public class Tarefa {
         this.status = TarefaStatus.PENDENTE;
     }
 
+    public void atualizar(Optional<String> titulo, Optional<String> descricao, Optional<TarefaStatus> status){
+        titulo.ifPresent(this::setTitulo);
+        descricao.ifPresent(d -> this.setDescricao(Optional.of(d)));
+        status.ifPresent(this::setStatus);
+    }
+
 
 }
